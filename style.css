@@ -199,7 +199,8 @@ nav {
 
 .btn__menu {
     display: none;
-    background: transparent;
+    background-color: transparent;
+    text-align: center;
     border: none;
     transition: all 300ms ease;
 }
@@ -209,7 +210,7 @@ nav {
 }
 
 .modal {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -219,7 +220,7 @@ nav {
     background-color: #fff;
     border: 1px solid rgb(229, 231, 235);
     border-radius: 8px;
-    z-index: 4;
+    z-index: 10;
     visibility: hidden;
     opacity: 0;
     transform: translateX(300%);
@@ -244,6 +245,7 @@ nav {
     border-bottom: 2px solid transparent;
 }
 
+
 .modal__link--primary {
     color: #f7fafc;
     padding: 12px 32px;
@@ -259,7 +261,7 @@ nav {
 }
 
 .btn__menu--close {
-    position: fixed;
+    position: absolute;
     top: 24px;
     right: 18px;
 }
@@ -338,6 +340,7 @@ header .row {
     margin-top: 16px;
     padding-right: 128px;
     opacity: 0.5;
+    max-width: 480px;
 }
 
 .header__img--wrapper {
@@ -1065,14 +1068,52 @@ MOBILE RESPONSIVENESS ↓
     .btn__menu {
         display: block;
     }
+
+    .nav__links {
+        display: none;
+    }
+
     header .row {
         flex-direction: column;
         align-items: center;
     }
+
+    .service {
+        width: calc(100%/2);
+    }
+
+    .plans {
+        justify-content: center;
+    }
+
     footer {
         padding: 80px 32px;
     }
+
+    .header__row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__description {
+        width: 80%;
+        align-items: center;
+    }
+    h1 {
+        text-align: center;
+        font-size: 36px;
+    }
+    .header__description--para {
+        text-align: center;
+    }
+    .header__customers {
+        padding: 0;
+    }
+    .header__customers--title {
+        margin-top: 40px;
+    }
 }
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES  */
 
 @media(max-width: 768px) {
     #quality .row,
@@ -1087,11 +1128,69 @@ MOBILE RESPONSIVENESS ↓
     #pricing .row {
         margin-top: 40px;
     }
+    .container {
+        padding: 48px 0;
+    }
+    .header__description {
+        width: 100%;
+        align-items: center;
+        padding: 24px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 36px;
+    }
+    .header__description--para {
+        text-align: center;
+    }
+    .header__customers {
+        padding: 0;
+    }
+    .header__customers--title {
+        margin-top: 40px;
+    }
+    .quality__img--wrapper {
+        display: none;
+    }
+    .quality__description {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+    .steps__img--wrapper {
+        display: none;
+    }
+    .steps__description {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        text-align: center;
+    }
+    .step {
+        align-items: center;
+        justify-content: center;
+    }
+    .section__title {
+        font-size: 36px;
+    }
+    .values__img--wrapper {
+        display: none;
+    }
+    .values__description {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+    .start__title {
+        font-size: 24px;
+    }
 }
 
-@media(max-width: 640px) {
+/* SMALL PHONES, LARGE SMARTPHONES  */
+
+@media(max-width: 550px) {
     .container {
-        padding: 80px 0;
+        padding: 48px 0;
     }
     .nav__logo {
         margin: 8px 0;
@@ -1100,4 +1199,43 @@ MOBILE RESPONSIVENESS ↓
     main {
         margin-bottom: 80px;
     }
-}
+    .service {
+        width: 100%;
+    }
+    .plans {
+        justify-content: space-evenly;
+    }
+    .plan__price {
+        font-size: 24px;
+    }
+    .plan__target {
+        font-size: 12px;
+    }
+    .testimonials__img--wrapper {
+        display: none;
+    }
+    .testimonials__description {
+        padding-left: 0;
+    }
+    .start__container {
+        flex-direction: column;
+        padding: 48px 32px;
+    }
+    .start__buttons {
+        justify-content: center;
+    }
+
+    .start__title {
+        display: none;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        margin-bottom: 24px;
+    }
+    .footer__copyright {
+        margin-bottom: 24px;
+    }
